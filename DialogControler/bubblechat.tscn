@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cnp5db3muw4ia"]
+
+[ext_resource type="Script" uid="uid://jkhw1cywmueq" path="res://BubbleChat.gd" id="1_s6udu"]
+[ext_resource type="Texture2D" uid="uid://b53wedxfoe1b1" path="res://BubbleChatNanaya.png" id="2_nvi6e"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.gd" id="3_x6iog"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eim34"]
+
+[node name="bubblechat" type="CanvasLayer" unique_id=515843057]
+script = ExtResource("1_s6udu")
+
+[node name="Control" type="Control" parent="." unique_id=485026533]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="PanelContainer" parent="Control" unique_id=1971064502]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_eim34")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/Panel" unique_id=1920887598]
+layout_mode = 2
+texture = ExtResource("2_nvi6e")
+region_rect = Rect2(0.13672256, -0.09758425, 47.863277, 48.097584)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Panel" unique_id=610652542]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Control/Panel/MarginContainer" unique_id=1485435680]
+layout_mode = 2
+text = "test"
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("3_x6iog")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+metadata/_custom_type_script = "uid://g32um0mltv5d"
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=686707965]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,3 +1,10 @@
+
+
+
+pastikan node bubble scene benar dan sudah dipasangkan dengan bubblechat gd
+
+
+func untuk memanggil
 ```
 func mulai_testing() -> void:
 	# Nama kunci ("serigala" & "kucing") harus sama persis dengan nama di file .dialogue
